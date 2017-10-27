@@ -3,25 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Native", "Native", "{A1A70959-F4EF-4787-8B6D-37F13420B211}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterAuth", "TwitterAuth\TwitterAuth.csproj", "{FA64E964-EF21-4E62-AB41-93A42B3FED11}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Forms", "Forms", "{F257DB94-95E3-4AFC-857E-7B46360AEAA3}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Forms", "Forms", "{6B48F9BD-F908-47F1-A6CD-14CD8E8FCEB6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NetStandard", "NetStandard", "{4644B318-0C47-47CF-8F88-3E220B2B4FEE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Native", "Native", "{C8ED208D-9834-480F-9CB7-C2EEEB63F043}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PCL", "PCL", "{8CD490DE-A5BB-46ED-A5BC-62352BC2625C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterAuth.Native.Android", "Native\TwitterAuth.Native.Android\TwitterAuth.Native.Android.csproj", "{2165C8CE-158E-49C1-8D09-12DED707A02E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwitterAuth", "NetStandard\TwitterAuth\TwitterAuth.csproj", "{0922E023-9A42-4CD4-93BF-0682414B2E8D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterAuth.Native.iOS", "Native\TwitterAuth.Native.iOS\TwitterAuth.Native.iOS.csproj", "{94FB4D90-0116-43F9-BA38-514995B7A3C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterAuth.Native.Android", "NetStandard\Native\TwitterAuth.Native.Android\TwitterAuth.Native.Android.csproj", "{2165C8CE-158E-49C1-8D09-12DED707A02E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterAuth.Forms", "Forms\TwitterAuth.Forms\TwitterAuth.Forms.csproj", "{03C1D1B2-1963-42BE-AEF2-8FBFA36EBD7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterAuth.Native.iOS", "NetStandard\Native\TwitterAuth.Native.iOS\TwitterAuth.Native.iOS.csproj", "{94FB4D90-0116-43F9-BA38-514995B7A3C5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterAuth.Forms.Android", "Forms\TwitterAuth.Forms.Android\TwitterAuth.Forms.Android.csproj", "{7B6C6C93-A972-4352-9920-D634A83D2EE2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterAuth.Forms", "NetStandard\Forms\TwitterAuth.Forms\TwitterAuth.Forms.csproj", "{03C1D1B2-1963-42BE-AEF2-8FBFA36EBD7E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterAuth.Forms.Android", "NetStandard\Forms\TwitterAuth.Forms.Android\TwitterAuth.Forms.Android.csproj", "{7B6C6C93-A972-4352-9920-D634A83D2EE2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterAuth.Forms.iOS", "NetStandard\Forms\TwitterAuth.Forms.iOS\TwitterAuth.Forms.iOS.csproj", "{788967AE-A97D-4FFC-B036-F1D12D71EB34}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterAuth.Forms.iOS", "Forms\TwitterAuth.Forms.iOS\TwitterAuth.Forms.iOS.csproj", "{788967AE-A97D-4FFC-B036-F1D12D71EB34}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,30 +35,30 @@ Global
 		Release|iPhoneSimulator = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0922E023-9A42-4CD4-93BF-0682414B2E8D}.Ad-Hoc|Any CPU.ActiveCfg = Debug|Any CPU
-		{0922E023-9A42-4CD4-93BF-0682414B2E8D}.Ad-Hoc|Any CPU.Build.0 = Debug|Any CPU
-		{0922E023-9A42-4CD4-93BF-0682414B2E8D}.Ad-Hoc|iPhone.ActiveCfg = Debug|Any CPU
-		{0922E023-9A42-4CD4-93BF-0682414B2E8D}.Ad-Hoc|iPhone.Build.0 = Debug|Any CPU
-		{0922E023-9A42-4CD4-93BF-0682414B2E8D}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{0922E023-9A42-4CD4-93BF-0682414B2E8D}.Ad-Hoc|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{0922E023-9A42-4CD4-93BF-0682414B2E8D}.AppStore|Any CPU.ActiveCfg = Debug|Any CPU
-		{0922E023-9A42-4CD4-93BF-0682414B2E8D}.AppStore|Any CPU.Build.0 = Debug|Any CPU
-		{0922E023-9A42-4CD4-93BF-0682414B2E8D}.AppStore|iPhone.ActiveCfg = Debug|Any CPU
-		{0922E023-9A42-4CD4-93BF-0682414B2E8D}.AppStore|iPhone.Build.0 = Debug|Any CPU
-		{0922E023-9A42-4CD4-93BF-0682414B2E8D}.AppStore|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{0922E023-9A42-4CD4-93BF-0682414B2E8D}.AppStore|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{0922E023-9A42-4CD4-93BF-0682414B2E8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0922E023-9A42-4CD4-93BF-0682414B2E8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0922E023-9A42-4CD4-93BF-0682414B2E8D}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{0922E023-9A42-4CD4-93BF-0682414B2E8D}.Debug|iPhone.Build.0 = Debug|Any CPU
-		{0922E023-9A42-4CD4-93BF-0682414B2E8D}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{0922E023-9A42-4CD4-93BF-0682414B2E8D}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{0922E023-9A42-4CD4-93BF-0682414B2E8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0922E023-9A42-4CD4-93BF-0682414B2E8D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0922E023-9A42-4CD4-93BF-0682414B2E8D}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{0922E023-9A42-4CD4-93BF-0682414B2E8D}.Release|iPhone.Build.0 = Release|Any CPU
-		{0922E023-9A42-4CD4-93BF-0682414B2E8D}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{0922E023-9A42-4CD4-93BF-0682414B2E8D}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{FA64E964-EF21-4E62-AB41-93A42B3FED11}.Ad-Hoc|Any CPU.ActiveCfg = Release|Any CPU
+		{FA64E964-EF21-4E62-AB41-93A42B3FED11}.Ad-Hoc|Any CPU.Build.0 = Release|Any CPU
+		{FA64E964-EF21-4E62-AB41-93A42B3FED11}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{FA64E964-EF21-4E62-AB41-93A42B3FED11}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
+		{FA64E964-EF21-4E62-AB41-93A42B3FED11}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{FA64E964-EF21-4E62-AB41-93A42B3FED11}.Ad-Hoc|iPhoneSimulator.Build.0 = Release|Any CPU
+		{FA64E964-EF21-4E62-AB41-93A42B3FED11}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
+		{FA64E964-EF21-4E62-AB41-93A42B3FED11}.AppStore|Any CPU.Build.0 = Release|Any CPU
+		{FA64E964-EF21-4E62-AB41-93A42B3FED11}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{FA64E964-EF21-4E62-AB41-93A42B3FED11}.AppStore|iPhone.Build.0 = Release|Any CPU
+		{FA64E964-EF21-4E62-AB41-93A42B3FED11}.AppStore|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{FA64E964-EF21-4E62-AB41-93A42B3FED11}.AppStore|iPhoneSimulator.Build.0 = Release|Any CPU
+		{FA64E964-EF21-4E62-AB41-93A42B3FED11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA64E964-EF21-4E62-AB41-93A42B3FED11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA64E964-EF21-4E62-AB41-93A42B3FED11}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{FA64E964-EF21-4E62-AB41-93A42B3FED11}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{FA64E964-EF21-4E62-AB41-93A42B3FED11}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{FA64E964-EF21-4E62-AB41-93A42B3FED11}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{FA64E964-EF21-4E62-AB41-93A42B3FED11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA64E964-EF21-4E62-AB41-93A42B3FED11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA64E964-EF21-4E62-AB41-93A42B3FED11}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{FA64E964-EF21-4E62-AB41-93A42B3FED11}.Release|iPhone.Build.0 = Release|Any CPU
+		{FA64E964-EF21-4E62-AB41-93A42B3FED11}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{FA64E964-EF21-4E62-AB41-93A42B3FED11}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{2165C8CE-158E-49C1-8D09-12DED707A02E}.Ad-Hoc|Any CPU.ActiveCfg = Release|Any CPU
 		{2165C8CE-158E-49C1-8D09-12DED707A02E}.Ad-Hoc|Any CPU.Build.0 = Release|Any CPU
 		{2165C8CE-158E-49C1-8D09-12DED707A02E}.Ad-Hoc|Any CPU.Deploy.0 = Release|Any CPU
@@ -206,14 +202,11 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{A1A70959-F4EF-4787-8B6D-37F13420B211} = {4644B318-0C47-47CF-8F88-3E220B2B4FEE}
-		{F257DB94-95E3-4AFC-857E-7B46360AEAA3} = {4644B318-0C47-47CF-8F88-3E220B2B4FEE}
-		{0922E023-9A42-4CD4-93BF-0682414B2E8D} = {4644B318-0C47-47CF-8F88-3E220B2B4FEE}
-		{2165C8CE-158E-49C1-8D09-12DED707A02E} = {A1A70959-F4EF-4787-8B6D-37F13420B211}
-		{94FB4D90-0116-43F9-BA38-514995B7A3C5} = {A1A70959-F4EF-4787-8B6D-37F13420B211}
-		{03C1D1B2-1963-42BE-AEF2-8FBFA36EBD7E} = {F257DB94-95E3-4AFC-857E-7B46360AEAA3}
-		{7B6C6C93-A972-4352-9920-D634A83D2EE2} = {F257DB94-95E3-4AFC-857E-7B46360AEAA3}
-		{788967AE-A97D-4FFC-B036-F1D12D71EB34} = {F257DB94-95E3-4AFC-857E-7B46360AEAA3}
+		{2165C8CE-158E-49C1-8D09-12DED707A02E} = {C8ED208D-9834-480F-9CB7-C2EEEB63F043}
+		{94FB4D90-0116-43F9-BA38-514995B7A3C5} = {C8ED208D-9834-480F-9CB7-C2EEEB63F043}
+		{03C1D1B2-1963-42BE-AEF2-8FBFA36EBD7E} = {6B48F9BD-F908-47F1-A6CD-14CD8E8FCEB6}
+		{7B6C6C93-A972-4352-9920-D634A83D2EE2} = {6B48F9BD-F908-47F1-A6CD-14CD8E8FCEB6}
+		{788967AE-A97D-4FFC-B036-F1D12D71EB34} = {6B48F9BD-F908-47F1-A6CD-14CD8E8FCEB6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B853BA92-68E7-4C79-B92A-86E5A71A0387}

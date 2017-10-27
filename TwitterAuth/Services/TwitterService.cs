@@ -6,12 +6,22 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using TwitterAuth.Authentication;
 
 namespace TwitterAuth.Services
 {
     public class TwitterService
     {
-        public async Task<string> GetEmailAsync(string oauthConsumerKey, string oauthConsumerSecret, string oauthToken, string oauthTokenSecret)
+        public TwitterService(string oauthConsumerKey, string oauthConsumerSecret)
+        {
+            OauthConsumerKey = oauthConsumerKey;
+            OauthConsumerSecret = oauthConsumerSecret;
+        }
+
+        public string OauthConsumerKey { get; }
+        public string OauthConsumerSecret { get; }
+
+        public async Task<string> GetEmailAsync(TwitterOAuthToken token)
         {
             string url = "https://api.twitter.com/1.1/account/verify_credentials.json";
             string oauthsignaturemethod = "HMAC-SHA1";
@@ -24,11 +34,11 @@ namespace TwitterAuth.Services
             SortedDictionary<string, string> basestringParameters = new SortedDictionary<string, string>();
             basestringParameters.Add("include_email", "true");
             basestringParameters.Add("oauth_version", "1.0");
-            basestringParameters.Add("oauth_consumer_key", oauthConsumerKey);
+            basestringParameters.Add("oauth_consumer_key", OauthConsumerKey);
             basestringParameters.Add("oauth_nonce", oauthnonce);
             basestringParameters.Add("oauth_signature_method", "HMAC-SHA1");
             basestringParameters.Add("oauth_timestamp", oauthtimestamp);
-            basestringParameters.Add("oauth_token", oauthToken);
+            basestringParameters.Add("oauth_token", token.Token);
 
             //GS - Build the signature string
             StringBuilder baseString = new StringBuilder();
@@ -43,8 +53,8 @@ namespace TwitterAuth.Services
             string finalBaseString = baseString.ToString().Substring(0, baseString.Length - 3);
 
             //Build the signing key
-            string signingKey = EncodeCharacters(Uri.EscapeDataString(oauthConsumerSecret)) + "&" +
-            EncodeCharacters(Uri.EscapeDataString(oauthTokenSecret));
+            string signingKey = EncodeCharacters(Uri.EscapeDataString(OauthConsumerSecret)) + "&" +
+            EncodeCharacters(Uri.EscapeDataString(token.TokenSecret));
 
             //Sign the request
             var algorithm = WinRTCrypto.MacAlgorithmProvider.OpenAlgorithm(MacAlgorithm.HmacSha1);
@@ -57,8 +67,8 @@ namespace TwitterAuth.Services
             authorizationHeaderParams.Append("oauth_nonce=" + "\"" + Uri.EscapeDataString(oauthnonce) + "\",");
             authorizationHeaderParams.Append("oauth_signature_method=" + "\"" + Uri.EscapeDataString(oauthsignaturemethod) + "\",");
             authorizationHeaderParams.Append("oauth_timestamp=" + "\"" + Uri.EscapeDataString(oauthtimestamp) + "\",");
-            authorizationHeaderParams.Append("oauth_consumer_key=" + "\"" + Uri.EscapeDataString(oauthConsumerKey) + "\",");
-            if (!string.IsNullOrEmpty(oauthToken)) authorizationHeaderParams.Append("oauth_token=" + "\"" + Uri.EscapeDataString(oauthToken) + "\",");
+            authorizationHeaderParams.Append("oauth_consumer_key=" + "\"" + Uri.EscapeDataString(OauthConsumerKey) + "\",");
+            if (!string.IsNullOrEmpty(token.Token)) authorizationHeaderParams.Append("oauth_token=" + "\"" + Uri.EscapeDataString(token.Token) + "\",");
             authorizationHeaderParams.Append("oauth_signature=" + "\"" + Uri.EscapeDataString(oauthsignature) + "\",");
             authorizationHeaderParams.Append("oauth_version=" + "\"" + Uri.EscapeDataString(oauthversion) + "\"");
 
