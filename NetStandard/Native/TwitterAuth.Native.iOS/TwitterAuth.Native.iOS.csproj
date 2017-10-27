@@ -67,15 +67,6 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\TwitterAuth\TwitterAuth.csproj">
-      <Project>{a515d73d-6a34-407b-bbff-cd9ffe34b2d5}</Project>
-      <Name>TwitterAuth</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TwitterAuth.Native\TwitterAuth.Native.csproj">
-      <Name>TwitterAuth.Native</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json">
       <InProject>false</InProject>
     </ImageAsset>
