@@ -2,7 +2,7 @@
 {
     public static class Configuration
     {
-        public const string ClientId = "6ozsrJfgvSe58Pl45MLk65PfH";
-        public const string ClientSecret = "tneY3Wf4hxpFM8UpuSvw9bhy6P9vF11KUS731Suk2xmkGPUZgB";
+        public const string ClientId = "OhNYJzWKO3iCCLvACyjinqMn3";
+        public const string ClientSecret = "7oV9DuLX17RUEBZxmdQsgDaB2PifGVxC49YhlbOwkP2jZDLwKp";
     }
 }
