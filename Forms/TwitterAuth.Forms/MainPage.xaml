@@ -5,7 +5,7 @@
              x:Class="TwitterAuth.Forms.MainPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Button x:Name="LoginButton" Text="Login with Twitter"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>
