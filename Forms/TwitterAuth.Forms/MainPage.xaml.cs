@@ -9,6 +9,8 @@ namespace TwitterAuth.Forms
 {
     public partial class MainPage : ContentPage, ITwitterAuthenticationDelegate
     {
+        private TwitterAuthenticator _auth;
+
         public MainPage()
         {
             InitializeComponent();
@@ -21,8 +23,8 @@ namespace TwitterAuth.Forms
 
         private void OnTwitterLoginButtonClicked(object sender, EventArgs e)
         {
-            var auth = new TwitterAuthenticator(Configuration.ClientId, Configuration.ClientSecret, this);
-            var authenticator = auth.GetAuthenticator();
+            _auth = new TwitterAuthenticator(Configuration.ClientId, Configuration.ClientSecret, this);
+            var authenticator = _auth.GetAuthenticator();
             var presenter = new OAuthLoginPresenter();
             presenter.Login(authenticator);
         }
@@ -35,6 +37,8 @@ namespace TwitterAuth.Forms
 
             // Display it on the UI
             LoginButton.Text = $"Connected with {email}";
+
+            _auth = null;
         }
 
         public void OnAuthenticationCanceled()

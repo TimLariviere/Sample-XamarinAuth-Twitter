@@ -10,6 +10,8 @@ namespace TwitterAuth.Native.Droid
     [Activity (Label = "TwitterAuth.Native.Android", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Activity, ITwitterAuthenticationDelegate
 	{
+        private TwitterAuthenticator _auth;
+
         protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
@@ -23,8 +25,8 @@ namespace TwitterAuth.Native.Droid
         private void OnTwitterLoginButtonClicked(object sender, EventArgs e)
         {
             // Display the activity handling the authentication
-            var auth = new TwitterAuthenticator(Configuration.ClientId, Configuration.ClientSecret, this);
-            var authenticator = auth.GetAuthenticator();
+            _auth = new TwitterAuthenticator(Configuration.ClientId, Configuration.ClientSecret, this);
+            var authenticator = _auth.GetAuthenticator();
             var intent = authenticator.GetUI(this);
             StartActivity(intent);
         }
@@ -38,6 +40,8 @@ namespace TwitterAuth.Native.Droid
             // Display it on the UI
             var loginButton = FindViewById<Button>(Resource.Id.loginButton);
             loginButton.Text = $"Connected with {email}";
+
+            _auth = null;
         }
 
         public void OnAuthenticationCanceled()

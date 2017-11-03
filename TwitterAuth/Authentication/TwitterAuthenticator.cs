@@ -34,11 +34,6 @@ namespace TwitterAuth.Authentication
             return _auth;
         }
 
-        public void OnPageLoading(Uri uri)
-        {
-            _auth.OnPageLoading(uri);
-        }
-
         private void OnAuthenticationCompleted(object sender, AuthenticatorCompletedEventArgs e)
         {
             if (e.IsAuthenticated)
