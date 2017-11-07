@@ -8,7 +8,7 @@ namespace TwitterAuth.Authentication
         private const string AccessTokenUrl = "https://api.twitter.com/oauth/access_token";
         private const string AuthorizeUrl = "https://api.twitter.com/oauth/authorize";
         private const string RequestTokenUrl = "https://api.twitter.com/oauth/request_token";
-        private const string RedirectUrl = "https://mobile.twitter.com";
+        private const string RedirectUrl = "https://mobile.twitter.com/home";
         private const bool IsUsingNativeUI = false;
 
         private OAuth1Authenticator _auth;
